@@ -2820,7 +2820,7 @@
                         <optimize>true</optimize>
                         <source>${target.jdk}</source>
                         <target>${target.jdk}</target>
-                        <release>${target.jdk}</release>
+<!--                        <release>${target.jdk}</release>-->
                     </configuration>
                 </plugin>
                 <plugin>
@@ -3285,40 +3285,40 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>pl.project13.maven</groupId>
-                <artifactId>git-commit-id-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>get-the-git-infos</id>
-                        <goals>
-                            <goal>revision</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-                    <prefix>git</prefix>
-                    <verbose>false</verbose>
-                    <generateGitPropertiesFile>true</generateGitPropertiesFile>
-                    <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
-                    <format>json</format>
-                    <includeOnlyProperties>
-                        <includeOnlyProperty>git.commit.id</includeOnlyProperty>
-                        <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>
-                        <includeOnlyProperty>git.commit.message.short</includeOnlyProperty>
-                        <includeOnlyProperty>git.dirty</includeOnlyProperty>
-                    </includeOnlyProperties>
-                    <skip>false</skip>
-                    <useNativeGit>true</useNativeGit>
-                    <failOnNoGitDirectory>false</failOnNoGitDirectory>
-                    <gitDescribe>
-                        <skip>false</skip>
-                        <always>false</always>
-                        <dirty>-dirty</dirty>
-                    </gitDescribe>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>pl.project13.maven</groupId>-->
+<!--                <artifactId>git-commit-id-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>get-the-git-infos</id>-->
+<!--                        <goals>-->
+<!--                            <goal>revision</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>-->
+<!--                    <prefix>git</prefix>-->
+<!--                    <verbose>false</verbose>-->
+<!--                    <generateGitPropertiesFile>true</generateGitPropertiesFile>-->
+<!--                    <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>-->
+<!--                    <format>json</format>-->
+<!--                    <includeOnlyProperties>-->
+<!--                        <includeOnlyProperty>git.commit.id</includeOnlyProperty>-->
+<!--                        <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>-->
+<!--                        <includeOnlyProperty>git.commit.message.short</includeOnlyProperty>-->
+<!--                        <includeOnlyProperty>git.dirty</includeOnlyProperty>-->
+<!--                    </includeOnlyProperties>-->
+<!--                    <skip>false</skip>-->
+<!--                    <useNativeGit>true</useNativeGit>-->
+<!--                    <failOnNoGitDirectory>false</failOnNoGitDirectory>-->
+<!--                    <gitDescribe>-->
+<!--                        <skip>false</skip>-->
+<!--                        <always>false</always>-->
+<!--                        <dirty>-dirty</dirty>-->
+<!--                    </gitDescribe>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
         <extensions>
             <extension>
